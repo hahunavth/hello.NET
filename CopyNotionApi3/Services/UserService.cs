@@ -1,6 +1,5 @@
 ﻿namespace CopyNotionApi3.Services;
 
-using System;
 using AutoMapper;
 using BCrypt.Net;
 using CopyNotionApi3.Entities;
@@ -82,7 +81,6 @@ public class UserService : IUserService
     }
 
     // helper methods
-
     private User getUser(int id)
     {
         var user = _context.Users.Find(id);

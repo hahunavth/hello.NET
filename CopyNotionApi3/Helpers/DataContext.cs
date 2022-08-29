@@ -8,10 +8,7 @@ namespace CopyNotionApi3.Helpers
     {
         protected readonly IConfiguration Configuration;
 
-        public DataContext(IConfiguration configuration)
-        {
-            Configuration = configuration;
-        }
+        public DataContext(IConfiguration configuration) => Configuration = configuration;
 
         protected override void OnConfiguring(DbContextOptionsBuilder options)
         {
@@ -19,6 +16,7 @@ namespace CopyNotionApi3.Helpers
             options.UseSqlServer(Configuration.GetConnectionString("WebApiDatabase"));
         }
 
-        public DbSet<User> Users { get; set; }
+        public DbSet<User>? Users { get; set; }
     }
+
 }
