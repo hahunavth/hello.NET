@@ -17,6 +17,7 @@ namespace CopyNotionApi3.Helpers
         }
 
         public DbSet<User>? Users { get; set; }
+        public DbSet<UserRefreshTokens> UserRefreshToken { get; set; }
     }
 
 }

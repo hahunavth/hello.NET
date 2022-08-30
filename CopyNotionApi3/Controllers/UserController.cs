@@ -1,6 +1,7 @@
 ﻿namespace CopyNotionApi3.Controllers;
 
 using AutoMapper;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using CopyNotionApi3.Models.Users;
 using CopyNotionApi3.Services;
@@ -20,6 +21,7 @@ public class UsersController : ControllerBase
         _mapper = mapper;
     }
 
+    [Authorize]
     [HttpGet]
     public IActionResult GetAll()
     {
