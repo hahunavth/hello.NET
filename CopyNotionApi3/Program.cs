@@ -99,6 +99,8 @@ var app = builder.Build();
 
     app.UseMiddleware<ErrorHandlerMiddleware>();
 
+    app.UseStaticFiles();
+
     // NOTE: default config
     // Configure the HTTP request pipeline.
     if (app.Environment.IsDevelopment())
